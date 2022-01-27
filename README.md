@@ -1,18 +1,18 @@
 # MechaCar_Statistical_Analysis
 
-##Purpose:
+## Purpose:
 
-##Deliverables:
+## Deliverables:
 Deliverable 1: Linear Regression to Predict MPG
 Deliverable 2: Summary Statistics on Suspension Coils
 Deliverable 3: T-Test on Suspension Coils
 Deliverable 4: Design a Study Comparing the MechaCar to the Competition
 
 
-## Deliverable 1:
+### Deliverable 1:
 The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. The purpose of this deliverable is to design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. 
 
-### Linear Regression to Predict MPG
+#### Linear Regression to Predict MPG
 
 Using RStudio, I ran the following code: 
 - `library(dplyr)`
