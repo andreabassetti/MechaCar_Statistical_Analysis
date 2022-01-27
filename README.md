@@ -52,12 +52,30 @@ Lot summary:
 Looking at the total summary table we can see that the variance of the suspension coils is at 62.29 PSI, which is within the desired 100 PSI. When this is broken down by lots, we can see that the variance PSI for lot 1 and 2 is very low and definitely within the the desired 100 PSI. However, lot 3 has a variance of 170.28 PSI which is not within the desired 100 PSI. 
 
 ## Deliverable 3
-t.test(susp_coil$PSI,mu=1500)
+the purpose of this deliverable is to perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
 
-lot1 <- subset(susp_coil, Manufacturing_Lot=="Lot1")
-lot2 <- subset(susp_coil, Manufacturing_Lot=="Lot2")
-lot3 <- subset(susp_coil, Manufacturing_Lot=="Lot3")
+### T-Tests on Suspension Coils
 
-t.test(lot1$PSI,mu=1500)
-t.test(lot2$PSI,mu=1500)
-t.test(lot3$PSI,mu=1500)
+Using RStudio, I ran the following code: 
+- `t.test(susp_coil$PSI,mu=1500)`
+- `lot1 <- subset(susp_coil, Manufacturing_Lot=="Lot1")`
+- `lot2 <- subset(susp_coil, Manufacturing_Lot=="Lot2")`
+- `lot3 <- subset(susp_coil, Manufacturing_Lot=="Lot3")`
+- `t.test(lot1$PSI,mu=1500)`
+- `t.test(lot2$PSI,mu=1500)`
+- `t.test(lot3$PSI,mu=1500)`
+
+Suspension Coil T-test:
+
+![suspcoilttest](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/suspsoilttest.png)
+Lot 1 T-test:
+
+![lot1ttest](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/lot1ttest.png)
+Lot 2 T-test:
+
+![lot2ttest](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/lot2ttest.png)
+Lot 3 T-test:
+
+![lot3ttest](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/lot3ttest.png)
+
+The t-test is meant to test wheter there is a statistical difference between the mean of two groups. Using the assumed population of 1500, the results of all the t-test can be seen above. The true mean of the sample of all the three lots was 1498.78 with a p-value of 0.06. This is not a statisticlaly significant value, which means we cannot reject the null hypothesis. The three lots therfore have a statistically similar to the presumed populatuion of 1500. The t-test for lot 1 and 2 were a mean of 1550 and p-value of 1 & 1500.02 and p-value of 0.61 respectively. This brings to the same conclusion of the first t-test. The t-test for lot 3 has a sample mean of 1496.14 and a p-value of 0.04. The p-value is showing significance which means we can reject the null hypothesis. 
