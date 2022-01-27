@@ -9,10 +9,10 @@ Deliverable 3: T-Test on Suspension Coils
 Deliverable 4: Design a Study Comparing the MechaCar to the Competition
 
 
-### Deliverable 1:
+## Deliverable 1:
 The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. The purpose of this deliverable is to design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. 
 
-#### Linear Regression to Predict MPG
+### Linear Regression to Predict MPG
 
 Using RStudio, I ran the following code: 
 - `library(dplyr)`
@@ -21,7 +21,7 @@ Using RStudio, I ran the following code:
 - `summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=car_mpg))`
 
 Statistical summary:
-IMAGE
+![deliv1summary](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/deliv1summary.png)
 
 Resulting model: mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)
 
@@ -30,13 +30,28 @@ After looking at the output listed above, I can see that:
 - The slope of the linear model is not considered to be zero. The p-value is showing an extremel level of significance, especially against the assumer level of significance of 0.05%. 
 - The r-squared value for this model is 0.7149, which indicates that 71% of the predictions can be explained by the linear model. The adjusted r-square value is 0.6825, which means that if you adjust for the variables that are not significant only 68% of the predictions can be explained by the linear model. This is moderately effective.
 
-### Deliverable 2
-susp_coil<- read.csv('Suspension_Coil.csv',check.names = F,stringsAsFactors = F)
-total_summary<- susp_coil %>% summarize(Mean_PSI=mean(PSI), Median_PSI=median(PSI),Var_PSI=var(PSI),SD_PSI=sd(PSI),.groups = 'keep')
-lot_summary<- susp_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI), Median_PSI=median(PSI),Var_PSI=var(PSI),SD_PSI=sd(PSI),.groups = 'keep')
+## Deliverable 2
+The MechaCar Suspension_Coil.csv dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots. The purpose of this delivarable is to create a summary statistics table to show:
+- The suspension coil’s PSI continuous variable across all manufacturing lots
+- The following PSI metrics for each lot: mean, median, variance, and standard deviation.
 
+### Summary Statistics on Suspension Coils
+Using RStudio, I ran the following code: 
+- `susp_coil<- read.csv('Suspension_Coil.csv',check.names = F,stringsAsFactors = F)`
+- `total_summary<- susp_coil %>% summarize(Mean_PSI=mean(PSI), Median_PSI=median(PSI),Var_PSI=var(PSI),SD_PSI=sd(PSI),.groups = 'keep')`
+- `lot_summary<- susp_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI), Median_PSI=median(PSI),Var_PSI=var(PSI),SD_PSI=sd(PSI),.groups = 'keep')`
 
-### Deliverable 3
+Total summary:
+
+![totalsummary](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/totalsummary.png)
+
+Lot summary:
+
+![lotsummary](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/lotsummary.png)
+
+Looking at the total summary table we can see that the variance of the suspension coils is at 62.29 PSI, which is within the desired 100 PSI. When this is broken down by lots, we can see that the variance PSI for lot 1 and 2 is very low and definitely within the the desired 100 PSI. However, lot 3 has a variance of 170.28 PSI which is not within the desired 100 PSI. 
+
+## Deliverable 3
 t.test(susp_coil$PSI,mu=1500)
 
 lot1 <- subset(susp_coil, Manufacturing_Lot=="Lot1")
