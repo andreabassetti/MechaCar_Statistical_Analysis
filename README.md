@@ -52,7 +52,7 @@ Lot summary:
 Looking at the total summary table we can see that the variance of the suspension coils is at 62.29 PSI, which is within the desired 100 PSI. When this is broken down by lots, we can see that the variance PSI for lot 1 and 2 is very low and definitely within the the desired 100 PSI. However, lot 3 has a variance of 170.28 PSI which is not within the desired 100 PSI. 
 
 ## Deliverable 3
-the purpose of this deliverable is to perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+The purpose of this deliverable is to perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
 
 ### T-Tests on Suspension Coils
 
@@ -79,3 +79,15 @@ Lot 3 T-test:
 ![lot3ttest](https://github.com/andreabassetti/MechaCar_Statistical_Analysis/blob/main/png/lot3ttest.png)
 
 The t-test is meant to test wheter there is a statistical difference between the mean of two groups. Using the assumed population of 1500, the results of all the t-test can be seen above. The true mean of the sample of all the three lots was 1498.78 with a p-value of 0.06. This is not a statisticlaly significant value, which means we cannot reject the null hypothesis. The three lots therfore have a statistically similar to the presumed populatuion of 1500. The t-test for lot 1 and 2 were a mean of 1550 and p-value of 1 & 1500.02 and p-value of 0.61 respectively. This brings to the same conclusion of the first t-test. The t-test for lot 3 has a sample mean of 1496.14 and a p-value of 0.04. The p-value is showing significance which means we can reject the null hypothesis. 
+
+##n Deliverable 4
+The purpose of this deliverable is to describe a statistical study that can quantify how the MechaCar performs against the competition.
+## Study Design: MechaCar vs Competition
+This study is going to focus specifically on preformance based on a given list of metrics that determine the price of MechaCar vs the competition. The metrics that would have to be looked at are: price, veichle price, safety rating, miles per gallon, average milage life span, and resale value. The null hypothesis states that there is no significant difference between how the metrics listed affect the price of MechaCar vs the competition. The alternative hypothesis states that there is a significant difference between how the metrics listed affect the price of MechaCar vs the competition. I would run a multiple linear regression to understand which metrics have the highest and lowest correlation between the price of the veichle. 
+
+In your description, address the following questions:
+What metric or metrics are you going to test?
+What is the null hypothesis or alternative hypothesis?
+What statistical test would you use to test the hypothesis? And why?
+What data is needed to run the statistical test?
+
