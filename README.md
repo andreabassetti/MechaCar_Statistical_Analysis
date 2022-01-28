@@ -83,11 +83,6 @@ The t-test is meant to test wheter there is a statistical difference between the
 ##n Deliverable 4
 The purpose of this deliverable is to describe a statistical study that can quantify how the MechaCar performs against the competition.
 ## Study Design: MechaCar vs Competition
-This study is going to focus specifically on preformance based on a given list of metrics that determine the price of MechaCar vs the competition. The metrics that would have to be looked at are: price, veichle price, safety rating, miles per gallon, average milage life span, and resale value. The null hypothesis states that there is no significant difference between how the metrics listed affect the price of MechaCar vs the competition. The alternative hypothesis states that there is a significant difference between how the metrics listed affect the price of MechaCar vs the competition. I would run a multiple linear regression to understand which metrics have the highest and lowest correlation between the price of the veichle. 
+This study is going to focus specifically on preformance based on a given list of metrics that determine the price of MechaCar vs the competition. The metrics that would have to be looked at are: price, veichle price, safety rating, miles per gallon, average milage life span, and resale value. Data for the listed metrics needs to be collected for both MechaCar and the competitors. The null hypothesis states that there is no significant difference between how the metrics listed affect the price of MechaCar vs the competition. The alternative hypothesis states that there is a significant difference between how the metrics listed affect the price of MechaCar vs the competition. I would run a multiple linear regression to understand which metrics have the highest and lowest correlation between the metrics and the price of the veichle. This test would most accuratley allow us to understand if the variance in the dependant variable (price) is accounted for in a linear combination of independant variables.
 
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
 
